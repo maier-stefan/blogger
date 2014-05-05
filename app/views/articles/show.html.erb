@@ -3,4 +3,6 @@
   <%= @article.body %>
 </p>
 
-<%= link_to "back to article listings", articles_path  %>
+<%= link_to "back to article listings", articles_path %>
+<%= link_to "edit", edit_article_path(@article)  %>
+<%= link_to "delete", article_path(@article), method: :delete, data: {confirm: "you really want to delete that post?"} %>
